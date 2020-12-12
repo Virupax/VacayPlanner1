@@ -8,6 +8,14 @@ public class RoundTripFlightReservation implements IReservation {
 	private Itinerary onward_journey;
 	private Itinerary return_journey;
 	
+	public RoundTripFlightReservation(Integer num_adults, Integer num_children, Double cost, Itinerary onward_journey, Itinerary return_journey) {
+		this.setNum_adults(num_adults);
+		this.setNum_children(num_children);
+		this.setCost(cost);
+		this.setOnward_journey(onward_journey);
+		this.setReturn_journey(return_journey);
+	}
+	
 	public Integer getNum_adults() {
 		return num_adults;
 	}

@@ -10,6 +10,13 @@ public class Airport {
 	private String code;
 	private String city;
 	private State state;
+	
+	public Airport(String code, String city, State state) {
+		this.setCity(city);
+		this.setCode(code);
+		this.setState(state);
+	}
+	
 	public String getCode() {
 		return code;
 	}

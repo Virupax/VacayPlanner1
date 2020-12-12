@@ -13,7 +13,8 @@ public class VacationPackageAddOn implements IVacationPackage {
 	private IReservation reservation;
 	
 	
-	public VacationPackageAddOn(IVacationPackage vacation_package, IReservation reservation) {}
+	public VacationPackageAddOn(IVacationPackage vacation_package, IReservation reservation) {
+	}
 
 	
 	@Override
