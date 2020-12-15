@@ -83,13 +83,13 @@ public class HotelReseravtion implements IReservation {
 	@Override
 	public String getDescription() {
 		// TODO Auto-generated method stub
-		return null;
+		return "Cost for "+ this.getNum_rooms() + " room(s) is:" + this.getCost();
 	}
 
 	@Override
 	public Double getCost() {
 		// TODO Auto-generated method stub
-		return null;
+		return cost;
 	}
 
 }

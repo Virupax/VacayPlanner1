@@ -4,19 +4,26 @@ public class Airport {
 	private enum State {
 		NC,
 		AL,
-		NV
+		NV,
+		CA,
+		NY
 	}
 
 	private String code;
 	private String city;
-	private State state;
+	private Integer state;
 	
-	public Airport(String code, String city, State state) {
+	public Airport(String code, String city, Integer state) {
 		this.setCity(city);
 		this.setCode(code);
 		this.setState(state);
 	}
 	
+	public Airport() {
+		// TODO Auto-generated constructor stub
+
+	}
+
 	public String getCode() {
 		return code;
 	}
@@ -29,10 +36,14 @@ public class Airport {
 	public void setCity(String city) {
 		this.city = city;
 	}
-	public State getState() {
-		return state;
+	public String getState() {
+		if(state != null) {
+			return State.values()[state].toString();			
+		}else {
+			return null;
+		}
 	}
-	public void setState(State state) {
+	public void setState(Integer state) {
 		this.state = state;
 	}
 	

@@ -11,7 +11,16 @@ public class Flight {
 	private Date estimated_arrival;
 	private Double cost_per_Passenger;
 	
-	public Flight(String flight_num, Airport origin, Airport destination, Date departure, Date estimated_arrival, Double cost_per_Passenger) {}
+	public Flight(String flight_num, Airport origin, Airport destination, Date departure, Date estimated_arrival, Double cost_per_Passenger) {
+		this.setFlight_num(flight_num);
+		this.setOrigin(origin);
+		this.setDestination(destination);
+		this.setDeparture(departure);
+		this.setEstimated_arrival(estimated_arrival);
+		this.setCost_per_Passenger(cost_per_Passenger);
+	}
+	
+	public Flight() {}
 	
 	public String getFlight_num() {
 		return flight_num;

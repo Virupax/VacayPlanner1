@@ -2,6 +2,7 @@ package com.vacation;
 
 import java.util.List;
 
+
 public class Itinerary {
 	
 	private enum Direction {
@@ -9,9 +10,13 @@ public class Itinerary {
 		From
 	};
 	private List<Flight> flight_legs;
-	private Direction direction;
+	private Integer direction;
 	
-	public Itinerary(List<Flight> flight_legs) {}
+	public Itinerary(List<Flight> flight_legs) {
+		this.setFlight_legs(flight_legs);
+	}
+	
+	public Itinerary() {}
 
 	public List<Flight> getFlight_legs() {
 		return flight_legs;
@@ -21,11 +26,15 @@ public class Itinerary {
 		this.flight_legs = flight_legs;
 	}
 
-	public Direction getDirection() {
-		return direction;
+	public String getDirection() {		
+		if(direction != null) {
+			return Direction.values()[direction].toString();			
+		}else {
+			return null;
+		}
 	}
 
-	public void setDirection(Direction direction) {
+	public void setDirection(Integer direction) {
 		this.direction = direction;
 	}
 	

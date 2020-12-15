@@ -8,6 +8,9 @@ public class RoundTripInputValidator {
 	private RoundTripInputValidator() {}
 	
 	public static RoundTripInputValidator getInstance() {
+		if(instance == null) {
+			instance = new RoundTripInputValidator();
+		}
 		return instance;
 	}
 	
